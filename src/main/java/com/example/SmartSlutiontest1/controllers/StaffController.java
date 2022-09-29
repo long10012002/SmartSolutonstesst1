@@ -29,10 +29,16 @@ public class StaffController {
     @PostMapping("/create")
     public Staff create(@RequestBody Staff staff){
         staff.setDepartments(departmentService.findById(3).get());
+        System.out.println("Tao là long");
+        System.out.println("Tao là long");
+        System.out.println("Tao là long");
+        System.out.println("Tao là long");
+
         return staffservice.create(staff);
     }
     @PutMapping("{id}")
     public Staff update(@PathVariable("id") String id,@RequestBody Staff staff){
+
         return staffservice.update(staff);
     }
     @DeleteMapping("{id}")
